@@ -1,7 +1,7 @@
 {
   "name": "credit-checking",
   "description": "front of aicaigroup credit checking",
-  "author": "wangxiaoxiang@aicaigroup.com",
+  "author": "wxxcarl@163.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --env.dev",
