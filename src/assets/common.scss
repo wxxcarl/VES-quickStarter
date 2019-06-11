@@ -1,0 +1,268 @@
+$--color-danger: #ff525d;
+$--color-text-primary: #606266;
+$--background-color-base: #F5FAFF;
+$--color-primary-light-2: #409eff;
+$--color-primary-light-9: $--background-color-base;
+$--border-radius-base: 2px;
+$--button-medium-padding-horizontal: 16px;
+$--button-small-padding-horizontal: 10px;
+$--button-mini-padding-horizontal: 10px;
+$--font-weight-primary: normal;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index.scss';
+
+:root {
+    --colorHeaderBack: #fff;
+    --colorBodyBack: #fff;
+    --colorSiderBack: #1b1f33;
+    --colorTitleText: #303133;
+    --colorMainText: #606266;
+    --colorTipText: #909399;
+    --colorDisableText: #c0c4cc;
+    --colorMainBorder: #dcdfe6;
+    --colorTableBorder: #ebeef5;
+    --colorPrimary: #409eff;
+    --colorPrimaryLight: #79bbff;
+    --colorWarning: #e6a23c;
+    --colorDanger: #ff525d;
+    --fontSizeHeader: 20px;
+    --fontSizeTitle: 16px;
+    --fontSizeMain: 14px;
+    --fontSizeTip: 12px;
+    --asideWidth: 210px;
+}
+
+[class^='dmp-icon-'],
+[class*=' dmp-icon-'] {
+    font-family: 'iconfont' !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 14px;
+    color: var(--colorMainText);
+}
+
+/*布局start*/
+
+#app {
+    min-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Helvetica Neue', 'PingFang SC', Arial, sans-serif;
+}
+
+aside {
+    width: var(--asideWidth);
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--colorSiderBack);
+
+    .logo {
+        height: 50px;
+        background-size: 160px;
+    }
+
+    .el-menu {
+        border-right: none;
+        padding-top: 40px;
+
+        .el-menu-item {
+            font-size: 16px;
+
+            &:hover {
+                background: #3D4154!important;
+                color: #fff !important;
+                i {
+                    color: #fff;
+                }
+            }
+
+            &.is-active {
+                background-color: var(--colorPrimary) !important;
+            }
+
+            [class^="dmp-icon-"] {
+                margin: 0 12px 0 24px;
+                width: 24px;
+                text-align: center;
+                font-size: 18px;
+                vertical-align: middle;
+                float: left;
+            }
+        }
+    }
+}
+
+main {
+    padding-left: var(--asideWidth);
+
+    header {
+        text-align: right;
+        padding: 12px 20px;
+        color: var(--colorTipText);
+        border-bottom: solid 1px var(--colorMainBorder);
+        box-shadow: 0 1px 2px var(--colorMainBorder);
+
+        a {
+            color: var(--colorTipText);
+            text-decoration: none;
+        }
+
+        .el-dropdown {
+            cursor: pointer;
+        }
+
+        .logout {
+            padding: 5px 12px;
+            border-left: solid 1px var(--colorMainBorder);
+            margin-left: 12px;
+            color: var(--colorTipText);
+            font-weight: normal;
+            font-size: 13px;
+
+            &:hover {
+                border-left: solid 1px var(--colorMainBorder);
+            }
+        }
+    }
+
+    article.main {
+        padding: 25px;
+    }
+}
+
+.bui-cols {
+    display: flex;
+    align-items: center;
+}
+
+@for $i from 1 to 12 {
+    .bui-col-#{$i} {
+        flex: $i;
+        overflow: hidden;
+    }
+}
+
+/*布局end*/
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+.ell {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.block {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.fs-header {
+    font-size: var(--fontSizeHeader);
+}
+
+.fs-title {
+    font-size: var(--fontSizeTitle);
+}
+
+.fs-main {
+    font-size: var(--fontSizeMain);
+}
+
+.fs-tip {
+    font-size: var(--fontSizeTip);
+}
+
+.co-title {
+    color: var(--colorTitleText);
+}
+
+@each $i in 0, 5, 8, 10, 15, 20, 25, 30 {
+    .m#{$i} {
+        margin: #{$i}px !important;
+    }
+
+    .mt#{$i} {
+        margin-top: #{$i}px !important;
+    }
+
+    .mb#{$i} {
+        margin-bottom: #{$i}px !important;
+    }
+
+    .ml#{$i} {
+        margin-left: #{$i}px !important;
+    }
+
+    .mr#{$i} {
+        margin-right: #{$i}px !important;
+    }
+
+    .p#{$i} {
+        padding: #{$i}px !important;
+    }
+
+    .pt#{$i} {
+        padding-top: #{$i}px !important;
+    }
+
+    .pr#{$i} {
+        padding-right: #{$i}px !important;
+    }
+
+    .pb#{$i} {
+        padding-bottom: #{$i}px !important;
+    }
+
+    .pl#{$i} {
+        padding-left: #{$i}px !important;
+    }
+}
+
+@each $i in 100, 194, 200, 300, 700, 500, 900, 1200 {
+    .w#{$i} {
+        width: #{$i}px !important;
+    }
+}
